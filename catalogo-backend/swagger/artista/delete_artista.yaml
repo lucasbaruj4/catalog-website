@@ -1,0 +1,16 @@
+Borra un artista por su ID
+---
+tags:
+  - "artista"
+parameters:
+  - name: id
+    in: path
+    required: true
+    schema:
+      type: integer
+    description: ID del artista a borrar
+responses:
+  200:
+    description: Artista borrado exitosamente
+  404:
+    description: No se encontró el artista

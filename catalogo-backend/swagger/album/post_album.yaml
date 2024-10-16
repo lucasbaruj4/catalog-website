@@ -1,0 +1,42 @@
+Crea un nuevo álbum
+---
+tags:
+  - "album"
+parameters:
+  - name: body
+    in: body
+    schema:
+      $ref: "#/definitions/Albumpost"
+responses:
+  201:
+    description: Álbum creado exitosamente
+  404:
+    description: No se encontró el álbum
+  500:
+    description: Error inesperado al crear el álbum
+definitions:
+  Albumpost:
+    type: "object"
+    properties:
+      nombre:
+        type: "string"
+      descripcion:
+        type: "string"
+      precio:
+        type: "number"
+      estado:
+        type: "boolean"
+      categoria_id:
+        type: "integer"
+      proveedor_id:
+        type: "integer"
+      artista_id:
+        type: "integer"
+    example:
+      nombre: "Nombre del Álbum"
+      descripcion: "Descripción del álbum"
+      precio: 19.99
+      estado: true
+      categoria_id: 1
+      proveedor_id: 1
+      artista_id: 1

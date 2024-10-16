@@ -1,0 +1,30 @@
+Actualiza un artista existente
+---
+tags:
+  - "artista"
+parameters:
+  - name: id
+    in: path
+    required: true
+  - name: body
+    in: body
+    schema:
+      $ref: "#/definitions/Artistapost"
+responses:
+  200:
+    description: Artista actualizado exitosamente
+  404:
+    description: No se encontró el artista
+  500:
+    description: Error inesperado al actualizar el artista
+definitions:
+  Artistapost:
+    type: "object"
+    properties:
+      nombre:
+        type: "string"
+      descripcion:
+        type: "string"
+    example:
+      nombre: "Nombre del Artista"
+      descripcion: "Descripción del artista"

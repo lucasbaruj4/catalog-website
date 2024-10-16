@@ -1,0 +1,36 @@
+Crea una nueva música
+---
+tags:
+  - "musica"
+responses:
+  201:
+    description: Se creó correctamente la música
+  404:
+    description: No se encontró la música
+  500:
+    description: Error inesperado al crear la música
+parameters:
+  - name: body
+    in: body
+    schema:
+      $ref: "#/definitions/Musicapost"
+definitions:
+  Musicapost:
+    type: "object"
+    properties:
+      album_id:
+        type: "integer"
+      proveedor_id:
+        type: "integer"
+      categoria_id:
+        type: "integer"
+      artista_id:
+        type: "integer"
+      nombre:
+        type: "string"
+    example:
+      album_id: 1
+      proveedor_id: 2
+      categoria_id: 3
+      artista_id: 4
+      nombre: "Canción de ejemplo"

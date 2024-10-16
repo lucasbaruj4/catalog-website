@@ -1,0 +1,33 @@
+Actualiza un proveedor existente
+---
+tags:
+  - "proveedor"
+responses:
+  200:
+    description: Se actualizó correctamente el proveedor
+  404:
+    description: No se encontró el proveedor
+  500:
+    description: Error inesperado al actualizar el proveedor
+parameters:
+  - name: id
+    in: path
+    required: true
+  - name: body
+    in: body
+    schema:
+      $ref: "#/definitions/Proveedorput"
+definitions:
+  Proveedorput:
+    type: "object"
+    properties:
+      nombre:
+        type: "string"
+      direccion:
+        type: "string"
+      telefono:
+        type: "string"
+    example:
+      nombre: "Proveedor de Ejemplo"
+      direccion: "Calle Falsa 123"
+      telefono: "0987654321"

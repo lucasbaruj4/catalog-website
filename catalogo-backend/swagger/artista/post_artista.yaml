@@ -1,0 +1,27 @@
+Crea un nuevo artista
+---
+tags:
+  - "artista"
+parameters:
+  - name: body
+    in: body
+    schema:
+      $ref: "#/definitions/Artistapost"
+responses:
+  201:
+    description: Artista creado exitosamente
+  404:
+    description: No se encontró el artista
+  500:
+    description: Error inesperado al crear el artista
+definitions:
+  Artistapost:
+    type: "object"
+    properties:
+      nombre:
+        type: "string"
+      descripcion:
+        type: "string"
+    example:
+      nombre: "Nombre del Artista"
+      descripcion: "Descripción del artista"

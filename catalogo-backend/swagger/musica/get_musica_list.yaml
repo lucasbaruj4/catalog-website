@@ -1,0 +1,26 @@
+Obtiene una lista de todas las entradas de música
+---
+tags:
+  - "musica"
+responses:
+  200:
+    description: Lista de todas las entradas de música
+    content:
+      application/json:
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+              album_id:
+                type: integer
+              proveedor_id:
+                type: integer
+              categoria_id:
+                type: integer
+              artista_id:
+                type: integer
+              nombre:
+                type: string

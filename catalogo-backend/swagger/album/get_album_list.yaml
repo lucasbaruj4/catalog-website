@@ -1,0 +1,31 @@
+Obtiene una lista de todos los álbumes
+---
+tags:
+  - "album"
+responses:
+  200:
+    description: Lista de todos los álbumes
+    content:
+      application/json:
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+              nombre:
+                type: string
+              descripcion:
+                type: string
+              precio:
+                type: number
+                format: float
+              estado:
+                type: boolean
+              artista_id:
+                type: integer
+              categoria_id:
+                type: integer
+              proveedor_id:
+                type: integer

@@ -1,0 +1,30 @@
+Busca álbumes según los filtros proporcionados
+---
+tags: 
+- "album"
+parameters:
+  - name: query
+    in: page
+    description: Álbumes actuales en la página
+    default: 1
+  - name: body
+    in: body
+    schema: 
+      $ref: '#/definitions/AlbumSearch'
+responses:
+  200:
+    description: Álbumes actuales con filtros en página
+definitions:
+  AlbumSearch:
+    type: object
+    properties:
+      id:
+        type: "integer"
+      nombre:
+        type: "string"
+      estado:
+        type: "boolean"
+    example:
+      id: 10
+      nombre: "Álbum de Ejemplo"
+      estado: true

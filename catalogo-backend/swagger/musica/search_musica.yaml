@@ -1,0 +1,36 @@
+Busca músicas en función de los parámetros de búsqueda
+---
+tags: 
+  - "musica"
+responses:
+  200:
+    description: Músicas actuales con filtros en página
+parameters:
+  - name: query
+    in: page
+    description: Músicas actuales en la página
+    default: 1
+  - name: body
+    in: body
+    schema: 
+      $ref: '#/definitions/MusicSearch'
+definitions:
+  MusicSearch:
+    type: object
+    properties:
+      album_id:
+        type: "integer"
+      proveedor_id:
+        type: "integer"
+      categoria_id:
+        type: "integer"
+      artista_id:
+        type: "integer"
+      nombre:
+        type: "string"
+    example:
+      album_id: 1
+      proveedor_id: 2
+      categoria_id: 3
+      artista_id: 4
+      nombre: "Canción de ejemplo"

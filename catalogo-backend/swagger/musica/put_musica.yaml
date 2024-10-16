@@ -1,0 +1,19 @@
+Actualiza una música existente
+---
+tags:
+  - "musica"
+responses:
+  200:
+    description: Se actualizó correctamente la música
+  404:
+    description: No se encontró la música
+  500:
+    description: Error inesperado al actualizar la música
+parameters:
+  - name: id
+    in: path
+    required: true
+  - name: body
+    in: body
+    schema:
+      $ref: "#/definitions/Musicapost"

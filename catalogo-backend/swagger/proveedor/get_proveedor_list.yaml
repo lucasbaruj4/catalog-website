@@ -1,0 +1,22 @@
+Obtiene una lista de todos los proveedores
+---
+tags:
+  - "proveedor"
+responses:
+  200:
+    description: Lista de todos los proveedores
+    content:
+      application/json:
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+              nombre:
+                type: string
+              direccion:
+                type: string
+              telefono:
+                type: string

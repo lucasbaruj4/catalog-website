@@ -1,0 +1,24 @@
+Busca categorías en función de los parámetros de búsqueda
+---
+tags: 
+  - "categoria"
+responses:
+  200:
+    description: Categorías actuales con filtros en página
+parameters:
+  - name: query
+    in: page
+    description: Categorías actuales en la página
+    default: 1
+  - name: body
+    in: body
+    schema: 
+      $ref: '#/definitions/CategoriaSearch'
+definitions:
+  CategoriaSearch:
+    type: object
+    properties:
+      descripcion:
+        type: "string"
+    example:
+      descripcion: "Descripción de ejemplo para la categoría"

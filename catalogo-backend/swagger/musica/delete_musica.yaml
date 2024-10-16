@@ -1,0 +1,16 @@
+Borra una entrada de música
+---
+tags:
+  - "musica"
+responses:
+  200:
+    description: Se borró la entrada de música
+  404:
+    description: No se encontró la entrada de música
+parameters:
+  - name: id
+    in: path
+    required: true
+    schema:
+      type: integer
+    description: ID de la entrada de música a borrar

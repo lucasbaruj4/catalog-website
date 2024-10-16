@@ -1,0 +1,13 @@
+Borra una categoría
+---
+tags:
+  - "categoria"
+responses:
+  200:
+    description: Se borró la categoría
+  404:
+    description: No se encontró la categoría
+parameters:
+  - name: id
+    in: path
+    required: true

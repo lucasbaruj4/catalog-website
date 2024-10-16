@@ -1,0 +1,30 @@
+Crea un nuevo proveedor
+---
+tags:
+  - "proveedor"
+responses:
+  201:
+    description: Se creó correctamente el proveedor
+  404:
+    description: No se encontró el proveedor
+  500:
+    description: Error inesperado al crear el proveedor
+parameters:
+  - name: body
+    in: body
+    schema:
+      $ref: "#/definitions/Proveedorpost"
+definitions:
+  Proveedorpost:
+    type: "object"
+    properties:
+      nombre:
+        type: "string"
+      direccion:
+        type: "string"
+      telefono:
+        type: "string"
+    example:
+      nombre: "Proveedor de Ejemplo"
+      direccion: "Calle Falsa 123"
+      telefono: "0987654321"

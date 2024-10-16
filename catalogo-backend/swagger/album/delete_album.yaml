@@ -1,0 +1,16 @@
+Borra un álbum
+---
+tags:
+  - "album"
+parameters:
+  - name: id
+    in: path
+    required: true
+    description: ID del álbum a borrar
+    schema:
+      type: integer
+responses:
+  200:
+    description: El álbum fue borrado exitosamente
+  404:
+    description: No se encontró el álbum

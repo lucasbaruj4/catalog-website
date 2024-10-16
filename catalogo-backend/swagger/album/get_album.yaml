@@ -1,0 +1,38 @@
+Obtiene un álbum por su ID
+---
+tags:
+  - "album"
+parameters:
+  - name: id
+    in: path
+    required: true
+    description: ID del álbum a obtener
+    schema:
+      type: integer
+responses:
+  200:
+    description: El álbum fue obtenido exitosamente
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            id:
+              type: integer
+            nombre:
+              type: string
+            descripcion:
+              type: string
+            precio:
+              type: number
+              format: float
+            estado:
+              type: boolean
+            artista_id:
+              type: integer
+            categoria_id:
+              type: integer
+            proveedor_id:
+              type: integer
+  404:
+    description: No se encontró el álbum

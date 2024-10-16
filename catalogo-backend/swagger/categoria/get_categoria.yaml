@@ -1,0 +1,13 @@
+Obtiene una categoría por su ID
+---
+tags:
+  - "categoria"
+responses:
+  200:
+    description: Categoría obtenida con éxito
+  404:
+    description: No se encontró la categoría
+parameters:
+  - name: id
+    in: path
+    required: true

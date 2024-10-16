@@ -1,0 +1,20 @@
+Obtiene una lista de todos los artistas
+---
+tags:
+  - "artista"
+responses:
+  200:
+    description: Lista de todos los artistas
+    content:
+      application/json:
+        schema:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: integer
+              nombre:
+                type: string
+              descripcion:
+                type: string

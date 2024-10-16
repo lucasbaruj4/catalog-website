@@ -1,0 +1,16 @@
+Borra un proveedor
+---
+tags:
+  - "proveedor"
+responses:
+  200:
+    description: Se borró el proveedor
+  404:
+    description: No se encontró el proveedor
+parameters:
+  - name: id
+    in: path
+    required: true
+    schema:
+      type: integer
+    description: ID del proveedor a borrar

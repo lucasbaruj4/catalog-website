@@ -1,0 +1,7 @@
+Obtiene una lista de todas las categorías
+---
+tags:
+  - "categoria"
+responses:
+  200:
+    description: Lista de categorías obtenida con éxito

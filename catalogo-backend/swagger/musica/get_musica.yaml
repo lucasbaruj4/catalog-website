@@ -1,0 +1,33 @@
+Obtiene una entrada de música por su ID
+---
+tags:
+  - "musica"
+responses:
+  200:
+    description: Información de la entrada de música
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            id:
+              type: integer
+            album_id:
+              type: integer
+            proveedor_id:
+              type: integer
+            categoria_id:
+              type: integer
+            artista_id:
+              type: integer
+            nombre:
+              type: string
+  404:
+    description: No se encontró la entrada de música
+parameters:
+  - name: id
+    in: path
+    required: true
+    schema:
+      type: integer
+    description: ID de la entrada de música a obtener

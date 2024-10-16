@@ -1,0 +1,29 @@
+Obtiene un proveedor por su ID
+---
+tags:
+  - "proveedor"
+responses:
+  200:
+    description: Información del proveedor
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            id:
+              type: integer
+            nombre:
+              type: string
+            direccion:
+              type: string
+            telefono:
+              type: string
+  404:
+    description: No se encontró el proveedor
+parameters:
+  - name: id
+    in: path
+    required: true
+    schema:
+      type: integer
+    description: ID del proveedor a obtener
